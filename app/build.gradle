@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "27.0.2"
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
@@ -18,12 +18,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions "app"
     productFlavors {
         free {
             applicationIdSuffix ".free"
+            dimension "app"
         }
         paid {
             applicationIdSuffix ".paid"
+            dimension "app"
         }
     }
 }
